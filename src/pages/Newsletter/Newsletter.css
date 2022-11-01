@@ -49,18 +49,22 @@
   padding-left: 3.4em;
   border: none;
   margin-top: 1.5em;
+
+  background-image: url(/public/images/mail.svg);
+
+  background-repeat: no-repeat;
+  background-position: 10px;
 }
 
 .btn-newsletter {
   background: #ffcb47;
   box-shadow: 10px 10px 30px rgba(255, 203, 71, 0.3);
   padding: 1.6em;
-  color: #FFFFFF;
+  color: #ffffff;
   border: none;
   cursor: pointer;
-
 }
 
 .btn-newsletter:hover {
-  filter:brightness(95%);
+  filter: brightness(95%);
 }

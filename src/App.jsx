@@ -1,5 +1,5 @@
-import Navbar from "./pages/Navbar"
 import "./App.css"
+import Navbar from "./pages/Navbar"
 import Newsletter from './pages/Newsletter/index';
 
 
