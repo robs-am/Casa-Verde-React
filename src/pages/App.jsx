@@ -1,6 +1,6 @@
 import "./App.css"
-import Navbar from "./pages/Navbar"
-import Newsletter from './pages/Newsletter/index';
+import Navbar from "../components/Navbar"
+import Newsletter from '../components/Newsletter/index';
 
 
 

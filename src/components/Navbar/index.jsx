@@ -30,4 +30,6 @@ const Navbar = ({img}) => {
   );
 };
 
+
+
 export default Navbar;
