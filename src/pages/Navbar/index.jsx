@@ -1,10 +1,10 @@
 import "./NavBar.css";
 
-const Navbar = () => {
+const Navbar = ({img}) => {
   return (
     <div className="menu">
       <div className="logo-wrapper">
-        <img src="/images/logo.png" alt="logo Casa Verde" />
+        <img src={img} />
       </div>
       
       <nav>

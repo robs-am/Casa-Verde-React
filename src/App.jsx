@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
      
-     <Navbar />
+     <Navbar img={"./images/logo.png"} />
      <Newsletter placeholder={"Insira seu email"} email={Newsletter.email}  />
      
     </div>
