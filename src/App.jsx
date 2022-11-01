@@ -12,7 +12,7 @@ function App() {
     <div className="App">
      
      <Navbar />
-     <Newsletter />
+     <Newsletter placeholder={"Insira seu email"} email={Newsletter.email}  />
      
     </div>
   )

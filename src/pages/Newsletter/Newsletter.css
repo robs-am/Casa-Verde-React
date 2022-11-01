@@ -9,7 +9,8 @@
     display: flex;
     align-items: left;
     flex-direction: column;
-    margin-inline: 1.8em;
+    padding-inline: 1.8em;
+    background-color: #ffe29a;
 }
 
 .hero-section h1 {
@@ -33,5 +34,5 @@ line-height: 26px;
 
 color: #202020;
 
-opacity: 0.5
+opacity: 0.9
 }
