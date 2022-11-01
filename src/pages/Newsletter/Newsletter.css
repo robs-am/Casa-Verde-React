@@ -1,16 +1,15 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .hero-section {
-
-    display: flex;
-    align-items: left;
-    flex-direction: column;
-    padding-inline: 1.8em;
-    background-color: #ffe29a;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  padding-inline: 1.8em;
+  background-color: #ffe29a;
 }
 
 .hero-section h1 {
@@ -18,21 +17,50 @@
   font-style: normal;
   font-weight: 900;
   font-size: 50px;
-  line-height: 64px;
+  line-height: 50px;
+  margin-bottom: 1.6;
 
   color: #202020;
 }
 
 .hero-section p {
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 26px;
-/* or 162% */
+  margin-top: 1em;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  margin-bottom: 0.8em;
+  /* or 162% */
 
+  color: #202020;
 
-color: #202020;
+  opacity: 0.9;
+}
 
-opacity: 0.9
+.hero-section .p2 {
+  margin-top: 1.2em;
+}
+
+#email {
+  background: #ffffff;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+  padding-block: 1.6em;
+  padding-left: 3.4em;
+  border: none;
+  margin-top: 1.5em;
+}
+
+.btn-newsletter {
+  background: #ffcb47;
+  box-shadow: 10px 10px 30px rgba(255, 203, 71, 0.3);
+  padding: 1.6em;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+
+}
+
+.btn-newsletter:hover {
+  filter:brightness(95%);
 }
