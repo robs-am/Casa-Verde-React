@@ -1,4 +1,6 @@
 import Navbar from "./pages/Navbar"
+import "./App.css"
+import Newsletter from './pages/Newsletter/index';
 
 
 
@@ -10,6 +12,7 @@ function App() {
     <div className="App">
      
      <Navbar />
+     <Newsletter />
      
     </div>
   )
