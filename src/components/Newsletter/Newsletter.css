@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-y: hidden;
 }
 
 .hero-section {
@@ -97,15 +96,35 @@
 }
 
 @media only screen and (min-width: 992px) {
-  .hero-section {
-    background-color: transparent;
+  body {
+    background-image: url(/public/images/body-shape.png);
+    background-repeat: no-repeat;
+    background-position: right top;
   }
 
-  .hero::before {
+  .hero-section {
+    background-color: transparent;
+    z-index: -1;
+  }
+
+  .hero-section::before {
     content: "";
     background-image: url(/public/images/background-hero.png);
+
     opacity: 0.1;
     background-size: cover;
+  }
+
+  .hero-section::after {
+    content: "";
+    background-image: url(/public/images/planta-hero.svg);
+    background-repeat: no-repeat;
+    width: 787px;
+    height: 1183px;
+    position: absolute;
+    right: 10%;
+    top: 0%;
+    z-index: 999;
   }
 
   .hero-section h1 {
@@ -116,10 +135,11 @@
 
   .hero-section-p2 {
     width: 30em;
-    font-size: 22px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
   }
 
-  
   .form-newsletter {
     display: flex;
     flex-direction: row;
@@ -129,5 +149,4 @@
     height: 75px;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   }
-
 }

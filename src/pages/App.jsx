@@ -1,21 +1,15 @@
-import "./App.css"
-import Navbar from "../components/Navbar"
-import Newsletter from '../components/Newsletter/index';
-
+import "./App.css";
+import Homepage from "./Homepage/Homepage";
 
 
 
 function App() {
-  
-
   return (
     <div className="App">
-     
-     <Navbar img={"./images/logo2.svg"} />
-     <Newsletter placeholder={"Insira seu email"} email={Newsletter.email} img={"./images/mail.png"}   />
-     
+      <Homepage/>
+      
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
