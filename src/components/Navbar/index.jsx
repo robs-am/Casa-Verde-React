@@ -9,12 +9,12 @@ const Navbar = ({img}) => {
       
       <nav>
         <ul className="nav-links">
-          <li className="nav-link">
+          <li className="nav-link"> 
             <a href="/">Como fazer</a>
           </li>
           <li className="nav-link">
-            <a href="/">Ofertas</a>
-          </li>
+          <a href="/">Ofertas</a>
+            </li>
           <li className="nav-link">
             <a href="/">Depoimentos</a>
           </li>
