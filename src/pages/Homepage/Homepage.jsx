@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "../../components/Navbar";
 import Newsletter from "../../components/Newsletter";
 
+import "./Homepage.css"
+
 const Homepage = () => {
   return (
     <div>

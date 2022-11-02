@@ -37,11 +37,14 @@ a {
   flex-wrap: wrap;
   color: #202020;
   padding-bottom: 0.1em;
+  cursor: pointer;
 }
 
 .nav-link {
   padding-inline: 0.5em;
 }
+
+/* TABLET */
 
 @media only screen and (min-width: 768px) {
   .menu {
@@ -54,31 +57,37 @@ a {
 
   .nav-links {
     font-size: 18px;
+    cursor: pointer;
   }
 }
 
+/* DESKTOP */
+
 @media only screen and (min-width: 992px) {
- 
-    .menu{
-        display: flex;
-        flex-direction: row;
-       
-    }
-    nav {
-        display: flex;
-        justify-content:flex-end;
-        margin-right:2.8em;
-        margin-top: 0;
-
-    }
-
-    .logo-wrapper {
-        margin-left: 3.4em;
-    }
+  .menu {
+    display: flex;
+    flex-direction: row;
+  }
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2.8em;
+    margin-top: 0;
    
-
-  
   }
 
+  .nav-links {
+    font-weight: 500;
+    
+  }
 
+  .nav-link {
+    font-size: 24px;
+    padding: 16px;
+    cursor: pointer;
+  }
 
+  .logo-wrapper {
+    margin-left: 3.4em;
+  }
+}
