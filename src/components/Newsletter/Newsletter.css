@@ -12,26 +12,25 @@
   padding-inline: 1.8em;
   background-color: #ffe29a;
   height: 100vh;
-  
 }
 
 .hero-section h1 {
   font-family: "Elsie Swash Caps", cursive;
   font-style: normal;
   font-weight: 900;
-  font-size: 50px;
+  font-size: 60px;
   line-height: 50px;
-  margin-bottom: 1.6;
+  margin-bottom: 0.6em;
 
   color: #202020;
 }
 
-.hero-section p {
+.hero-section-p1 {
   margin-top: 1em;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 26px;
   margin-bottom: 0.8em;
   /* or 162% */
@@ -41,8 +40,9 @@
   opacity: 0.9;
 }
 
-.hero-section .p2 {
-  margin-top: 1.2em;
+.hero-section-p2 {
+  font-size: 16px;
+  margin-bottom: 1.8em;
 }
 
 #email {
@@ -73,21 +73,53 @@
 }
 
 @media only screen and (min-width: 820px) {
-  
   .hero-section h1 {
-    font-size: 80px;
+    font-size: 70px;
     padding-right: 1em;
-    line-height: 80px;
+    line-height: 70px;
+    max-width: 8em;
+    height: 2.3em;
   }
 
-  .hero-section p {
+  .hero-section-p2 {
+    width: 30em;
     font-size: 18px;
   }
 
   .hero-section {
     padding-inline: 4em;
-    
   }
 
-  
+  input,
+  button {
+    width: 40em;
+  }
 }
+
+  @media only screen and (min-width: 992px) {
+   .hero-section {
+      background-color: transparent;
+      
+   }
+
+  .hero::before {    
+        content: "";
+        background-image: url(/public/images/background-hero.png);
+        opacity: 0.1;;
+        background-size: cover;
+
+    }
+      
+    
+
+    .hero-section h1 {
+      font-size: 82px;
+      line-height: 94px;
+    }
+
+    .hero-section-p2 {
+      width: 30em;
+      font-size: 22px;
+    }
+  }
+
