@@ -16,9 +16,10 @@ const StyleHero = styled.section`
   }
   @media only screen and (min-width: 992px) {
     margin-block: 1em;
+    padding-left:4em;
     
     background-color: transparent;
-    z-index: -1;
+    
 
     &::before {
       content: "";

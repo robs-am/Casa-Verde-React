@@ -15,6 +15,13 @@ const Body = styled.body`
     background-image: url(/public/images/body-shape.png);
     background-repeat: no-repeat;
     background-position: right top;
+    z-index: -1;
+
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    
+
   }
 `;
 
@@ -22,6 +29,7 @@ const Homepage = () => {
   return (
     <div>
       
+        
         <Body>
           <Navbar img={"./images/logo2.svg"} />
           <Newsletter
