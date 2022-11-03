@@ -20,10 +20,13 @@ const StyleMenu = styled.div`
     display: flex;
     flex-direction: row;
     
+    
   }
 `;
 
- const StyleLogo = styled.div``;
+ const StyleLogo = styled.div`
+ margin-left: 3em;
+ `;
 
  const Styleimg = styled.img`
   @media only screen and (min-width: 992px) {
@@ -42,7 +45,7 @@ const StyleNav = styled.nav`
    {
     display: flex;
     justify-content: flex-end;
-    margin-right: 2.8em;
+    margin-right: 2em;
     margin-top: 0;
     color: transparent;
     
@@ -71,6 +74,8 @@ const StyleLinks = styled.ul`
     font-size: 18px;
   }
   @media only screen and (min-width: 992px){
+   
+    
     font-weight: 500;
     font-size: 16px;
     margin-top: 0;
@@ -88,6 +93,10 @@ const StyleLink = styled.a`
   @media only screen and (min-width: 992px){
     font-weight: 500;
     font-size: 16px;
+    display: flex;
+    padding-inline: 0.2em;
+    margin-right: 2em;
+    
   }
  
 `;

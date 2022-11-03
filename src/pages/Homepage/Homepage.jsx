@@ -4,11 +4,10 @@ import Newsletter from "../../components/Newsletter";
 
 import styled from "styled-components";
 
-
 const Body = styled.body`
   margin: 0;
   padding: 0;
-  
+
   box-sizing: border-box;
 
   @media only screen and (min-width: 992px) {
@@ -20,25 +19,20 @@ const Body = styled.body`
     display: flex;
     align-items: left;
     flex-direction: column;
-    
-
   }
 `;
 
 const Homepage = () => {
   return (
     <div>
-      
-        
-        <Body>
-          <Navbar img={"./images/logo2.svg"} />
-          <Newsletter
-            placeholder={"Insira seu email"}
-            email={Newsletter.email}
-            img={"./images/mail.png"}
-          />
-        </Body>
-      
+      <Body>
+        <Navbar img={"./images/logo2.svg"} />
+        <Newsletter
+          placeholder={"Insira seu email"}
+          email={Newsletter.email}
+          img={"./images/mail.png"}
+        />
+      </Body>
     </div>
   );
 };
