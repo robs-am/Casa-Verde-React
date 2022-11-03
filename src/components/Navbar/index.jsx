@@ -1,13 +1,6 @@
 import styled from "styled-components";
 
-const Body = styled.body`
 
-  @media only screen and (min-width: 992px) {
-    background-image: url(/public/images/body-shape.png);
-    background-repeat: no-repeat;
-    background-position: right top;
-  }
-`;
 
 const StyleMenu = styled.div`
   width: 100%;
@@ -29,6 +22,14 @@ const StyleMenu = styled.div`
     
   }
 `;
+
+ const StyleLogo = styled.div``;
+
+ const Styleimg = styled.img`
+  @media only screen and (min-width: 992px) {
+      margin-left: 3.5em;
+    }
+ `;
 
 const StyleNav = styled.nav`
   margin-top: 1em;
@@ -56,7 +57,7 @@ const StyleLinks = styled.ul`
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-
+  
   flex-wrap: wrap;
   color: #202020;
   padding-bottom: 0.1em;
@@ -72,6 +73,7 @@ const StyleLinks = styled.ul`
   @media only screen and (min-width: 992px){
     font-weight: 500;
     font-size: 16px;
+    margin-top: 0;
   }
 `;
 
@@ -96,9 +98,9 @@ const Navbar = ({ img }) => {
   return (
       
       <StyleMenu>
-        <div className="logo-wrapper">
-          <img src={img} />
-        </div>
+        <StyleLogo>
+          <Styleimg img src={img}/>
+        </StyleLogo>
         
         <StyleNav>
           <StyleLinks>
