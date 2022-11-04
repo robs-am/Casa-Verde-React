@@ -24,7 +24,7 @@ const Body = styled.body`
 
 const Homepage = () => {
   return (
-    <div>
+    
       <Body>
         <Navbar img={"./images/logo2.svg"} />
         <Newsletter
@@ -33,7 +33,7 @@ const Homepage = () => {
           img={"./images/mail.png"}
         />
       </Body>
-    </div>
+    
   );
 };
 

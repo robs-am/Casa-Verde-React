@@ -46,7 +46,7 @@ const StyleNav = styled.nav`
     display: flex;
     justify-content: flex-end;
     margin-right: 2em;
-    margin-top: 0;
+    margin-top: 1.1em;
     color: transparent;
     
   }
