@@ -3,7 +3,8 @@ import Homepage from "./Homepage/Homepage";
 
 
 import { GlobalStyle } from './../components/GlobalStyle';
-import Form from "../components/Form/Form";
+import SignupForm from './../components/Form/Form2';
+
 
 
 
@@ -13,7 +14,7 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Homepage/>
-      <Form placeholder={"Insira seu email: "} />
+      <SignupForm placeholder={"Insira seu email"} />
       
     </div>
   );
