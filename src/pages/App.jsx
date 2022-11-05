@@ -1,21 +1,15 @@
-
 import Homepage from "./Homepage/Homepage";
 
+import { GlobalStyle } from "./../components/GlobalStyle";
 
-import { GlobalStyle } from './../components/GlobalStyle';
-import SignupForm from './../components/Form/Form2';
-
-
-
-
+import Form from './../components/Form/Form';
 
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <Homepage/>
-      <SignupForm placeholder={"Insira seu email"} />
-      
+      <Homepage />
+      <Form />
     </div>
   );
 }
