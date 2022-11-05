@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Homepage />
-      <Form placeholder={"Insira seu email"}/>
+      
     </div>
   );
 }

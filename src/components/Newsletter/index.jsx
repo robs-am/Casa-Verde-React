@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-
-
+import Form from "../Form/Form";
 
 const StyleHero = styled.section`
   display: flex;
   align-items: left;
-  
+
   flex-direction: column;
   padding-inline: 1.8em;
-  
+
   background-color: #ffe29a;
   height: 100vh;
 
@@ -18,7 +17,7 @@ const StyleHero = styled.section`
   }
   @media only screen and (min-width: 992px) {
     padding-left: 4em;
-    margin-top:7.4em;
+    margin-top: 7.4em;
     margin-left: 3em;
 
     background-color: transparent;
@@ -163,23 +162,21 @@ const StyleButton = styled.button`
 
 const Newsletter = ({ email, placeholder }) => {
   return (
-   
-      <StyleHero>
-        <Stylep1>Sua casa com as</Stylep1>
-        <Styleh1>melhores plantas</Styleh1>
-        <Stylep2>
-          Encontre aqui uma vasta seleção de plantas para decorar a sua casa e
-          torná-lo uma pessoa mais feliz no seu dia a dia. Entre com seu e-mail
-          e assine nossa newsletter para saber das novidades da marca.
-        </Stylep2>
-        <StyleForm>
-          <StyleEmailIcon />
-          <StyleEmailInput placeholder={placeholder} required={true} />
-          {email}
-          <StyleButton>Assinar Newsletter</StyleButton>
-        </StyleForm>
-      </StyleHero>
-   
+    <StyleHero>
+      <Stylep1>Sua casa com as</Stylep1>
+      <Styleh1>melhores plantas</Styleh1>
+      <Stylep2>
+        Encontre aqui uma vasta seleção de plantas para decorar a sua casa e
+        torná-lo uma pessoa mais feliz no seu dia a dia. Entre com seu e-mail e
+        assine nossa newsletter para saber das novidades da marca.
+      </Stylep2>
+      <Form />
+        {/* <StyleEmailIcon />
+        <StyleEmailInput placeholder={placeholder} required={true} />
+        {email}
+        <StyleButton>Assinar Newsletter</StyleButton>
+      </Form> */}
+    </StyleHero>
   );
 };
 
