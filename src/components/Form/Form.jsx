@@ -26,14 +26,14 @@ const StyleEmailInput = styled.input`
   padding-block: 1.6em;
   padding-left: 3.4em;
   border: none;
-  width: 20em;
+  width: 25em;
   background-image: url(/public/images/mail.svg);
 
   background-repeat: no-repeat;
   background-position: 10px;
 
   @media only screen and (min-width: 700px) {
-    width: 20em;
+    width: 25em;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   }
 `;
@@ -45,7 +45,7 @@ const StyleButton = styled.button`
   color: #ffffff;
   border: none;
   cursor: pointer;
-  width: 20em;
+  width: 25em;
 
   &:hover {
     filter: brightness(95%);

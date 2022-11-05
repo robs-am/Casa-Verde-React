@@ -14,6 +14,7 @@ const StyleHero = styled.section`
 
   @media only screen and (min-width: 700px) {
     padding-inline: 4em;
+    
   }
   @media only screen and (min-width: 992px) {
     padding-left: 4em;
@@ -60,6 +61,7 @@ const Styleh1 = styled.h1`
     line-height: 70px;
     max-width: 8em;
     height: 1.8em;
+    margin-block: 0.2em;
   }
   @media only screen and (min-width: 992px) {
     font-size: 82px;
@@ -75,8 +77,13 @@ const Stylep1 = styled.p`
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  margin-bottom: 0.8em;
+  margin-block: 0.3em;
   opacity: 0.9;
+
+  @media only screen and (min-width: 700px) {
+   margin-top: 2em;
+   font-size: 22px;
+  }
 
   @media only screen and (min-width: 992px) {
     width: 30em;
@@ -89,13 +96,14 @@ const Stylep1 = styled.p`
 
 const Stylep2 = styled.p`
   font-size: 16px;
-  margin-bottom: 2em;
+  margin-bottom: 2.5em;
   line-height: 26px;
   text-align: left;
 
   @media only screen and (min-width: 700px) {
     width: 30em;
     font-size: 18px;
+    margin-top: 0.5em;
   }
   @media only screen and (min-width: 992px) {
     width: 30em;
@@ -105,60 +113,7 @@ const Stylep2 = styled.p`
   }
 `;
 
-const StyleForm = styled.form`
-  @media only screen and (min-width: 992px) {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 600px;
-    height: 75px;
-    width: 30em;
-  }
-`;
 
-const StyleEmailIcon = styled.div``;
-
-const StyleEmailInput = styled.input`
-  background: #ffffff;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-  padding-block: 1.6em;
-  padding-left: 3.4em;
-  border: none;
-  width: 20em;
-  background-image: url(/public/images/mail.svg);
-
-  background-repeat: no-repeat;
-  background-position: 10px;
-
-  @media only screen and (min-width: 700px) {
-    width: 20em;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-  }
-`;
-
-const StyleButton = styled.button`
-  background: #ffcb47;
-  box-shadow: 10px 10px 30px rgba(255, 203, 71, 0.3);
-  padding: 1.6em;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-  width: 20em;
-
-  &:hover {
-    filter: brightness(95%);
-  }
-
-  @media only screen and (min-width: 700px) {
-    width: 15em;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-  }
-  @media only screen and (min-width: 992px) {
-    width: 15em;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-  }
-`;
 
 const Newsletter = ({ email, placeholder }) => {
   return (
