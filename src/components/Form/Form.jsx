@@ -5,13 +5,17 @@ import { useFormik } from "formik";
 const StyleForm = styled.form`
   @media only screen and (min-width: 992px) {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: left;
     justify-content: center;
-    width: 600px;
+
     height: 75px;
-    width: 30em;
+    width: 35em;
   }
+`;
+
+const StyleNews = styled.div`
+
 `;
 
 const StyleEmailIcon = styled.div``;
@@ -52,19 +56,21 @@ const StyleButton = styled.button`
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   }
   @media only screen and (min-width: 992px) {
-    width: 15em;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   }
 `;
 
-const validate = values => {
+const StyleFormikerror = styled.div`
+  @media only screen and (min-width: 992px) {
+  }
+`;
+const validate = (values) => {
   const errors = {};
 
-
   if (!values.email) {
-    errors.email = 'Required';
+    errors.email = "Campo Obrigatório";
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
+    errors.email = "Email inválido";
   }
 
   return errors;
@@ -84,20 +90,22 @@ const Form = ({ placeholder }) => {
   });
   return (
     <StyleForm onSubmit={formik.handleSubmit}>
-      <StyleEmailIcon />
-      <StyleEmailInput
-        id="email"
-        name="email"
-        type="email"
-        placeholder={placeholder}
-        onBlur={formik.handleBlur}
-        onChange={formik.handleChange}
-        value={formik.values.email}
-      />
+      <StyleNews >
+        <StyleEmailIcon />
+        <StyleEmailInput
+          id="email"
+          name="email"
+          type="email"
+          placeholder={placeholder}
+          onBlur={formik.handleBlur}
+          onChange={formik.handleChange}
+          value={formik.values.email}
+        />
 
-      <StyleButton type="submit">Assinar Newsletter</StyleButton>
+        <StyleButton type="submit">Assinar Newsletter</StyleButton>
+      </StyleNews>
       {formik.touched.email && formik.errors.email ? (
-        <div>{formik.errors.email}</div>
+        <StyleFormikerror>{formik.errors.email}</StyleFormikerror>
       ) : null}
     </StyleForm>
   );
