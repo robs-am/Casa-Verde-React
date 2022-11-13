@@ -14,9 +14,7 @@ const StyleForm = styled.form`
   }
 `;
 
-const StyleNews = styled.div`
-
-`;
+const StyleNews = styled.div``;
 
 const StyleEmailIcon = styled.div``;
 
@@ -64,6 +62,8 @@ const StyleFormikerror = styled.div`
   @media only screen and (min-width: 992px) {
   }
 `;
+
+//validação//
 const validate = (values) => {
   const errors = {};
 
@@ -71,6 +71,8 @@ const validate = (values) => {
     errors.email = "Campo Obrigatório";
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
     errors.email = "Email inválido";
+  /* }else{
+    alert("O " + (values.email) + " foi cadastrado com sucesso"); */
   }
 
   return errors;
@@ -85,12 +87,12 @@ const Form = ({ placeholder }) => {
     },
     validate,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      alert("Obrigado! O email: " + (JSON.stringify(values.email, null, 2)) + " foi cadastrado com sucesso");
     },
   });
   return (
     <StyleForm onSubmit={formik.handleSubmit}>
-      <StyleNews >
+      <StyleNews>
         <StyleEmailIcon />
         <StyleEmailInput
           id="email"
