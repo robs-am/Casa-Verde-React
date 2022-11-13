@@ -71,8 +71,7 @@ const validate = (values) => {
     errors.email = "Campo Obrigatório";
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
     errors.email = "Email inválido";
-  /* }else{
-    alert("O " + (values.email) + " foi cadastrado com sucesso"); */
+  
   }
 
   return errors;
