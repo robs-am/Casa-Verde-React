@@ -14,7 +14,6 @@ const StyleHero = styled.section`
 
   @media only screen and (min-width: 700px) {
     padding-inline: 4em;
-    
   }
   @media only screen and (min-width: 992px) {
     padding-left: 4em;
@@ -81,8 +80,8 @@ const Stylep1 = styled.p`
   opacity: 0.9;
 
   @media only screen and (min-width: 700px) {
-   margin-top: 2em;
-   font-size: 22px;
+    margin-top: 2em;
+    font-size: 22px;
   }
 
   @media only screen and (min-width: 992px) {
@@ -113,8 +112,6 @@ const Stylep2 = styled.p`
   }
 `;
 
-
-
 const Newsletter = ({ email, placeholder }) => {
   return (
     <StyleHero>
@@ -126,11 +123,6 @@ const Newsletter = ({ email, placeholder }) => {
         assine nossa newsletter para saber das novidades da marca.
       </Stylep2>
       <Form />
-        {/* <StyleEmailIcon />
-        <StyleEmailInput placeholder={placeholder} required={true} />
-        {email}
-        <StyleButton>Assinar Newsletter</StyleButton>
-      </Form> */}
     </StyleHero>
   );
 };

@@ -63,6 +63,8 @@ const StyleFormikerror = styled.div`
   }
 `;
 
+
+
 //validação//
 const validate = (values) => {
   const errors = {};
@@ -77,9 +79,27 @@ const validate = (values) => {
   return errors;
 };
 
+//envio de emails
+
+const envioEmail = require("@sendgrid/mail");
+envioEmail.setApiKey("SG.CO12OEYlT1Ckl-PZ3CIH9g.4_mXBn2TqpVT7dOlxOOJnp3g9_pJi_FsC4pEed0GLjsSG.CO12OEYlT1Ckl-PZ3CIH9g.4_mXBn2TqpVT7dOlxOOJnp3g9_pJi_FsC4pEed0GLjs");
+
 const Form = ({ placeholder }) => {
-  // Pass the useFormik() hook initial form values and a submit function that will
-  // be called when the form is submitted
+ const onComplete = (fields) => {
+  const message = {
+    to: "lixor19291@jernang.com",
+    from: fields.email,
+    subject: fields.subject,
+    html: `
+    <p><strong>Name:</strong>${fields.name}</p>
+    <p>${fields.message}</p>`
+
+  }
+
+  envioEmail
+  .send(message)
+ }
+
   const formik = useFormik({
     initialValues: {
       email: "",
