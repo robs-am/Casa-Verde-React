@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { useFormik } from "formik";
 
+import.meta.env.VITE_SECRET_KEY
+
 const StyleForm = styled.form`
   @media only screen and (min-width: 992px) {
     display: flex;
@@ -63,8 +65,6 @@ const StyleFormikerror = styled.div`
   }
 `;
 
-
-
 //validação//
 const validate = (values) => {
   const errors = {};
@@ -73,7 +73,6 @@ const validate = (values) => {
     errors.email = "Campo Obrigatório";
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
     errors.email = "Email inválido";
-  
   }
 
   return errors;
@@ -82,33 +81,43 @@ const validate = (values) => {
 //envio de emails
 
 const envioEmail = require("@sendgrid/mail");
-envioEmail.setApiKey("SG.CO12OEYlT1Ckl-PZ3CIH9g.4_mXBn2TqpVT7dOlxOOJnp3g9_pJi_FsC4pEed0GLjsSG.CO12OEYlT1Ckl-PZ3CIH9g.4_mXBn2TqpVT7dOlxOOJnp3g9_pJi_FsC4pEed0GLjs");
+
 
 const Form = ({ placeholder }) => {
- const onComplete = (fields) => {
-  const message = {
-    to: "lixor19291@jernang.com",
-    from: fields.email,
-    subject: fields.subject,
-    html: `
-    <p><strong>Name:</strong>${fields.name}</p>
-    <p>${fields.message}</p>`
-
-  }
-
-  envioEmail
-  .send(message)
- }
-
   const formik = useFormik({
     initialValues: {
       email: "",
     },
+
+    //validação do cadastro com alerta para o usuário que o email foi
+    //cadastrado
+
     validate,
     onSubmit: (values) => {
-      alert("Obrigado! O email: " + (JSON.stringify(values.email, null, 2)) + " foi cadastrado com sucesso");
+      alert(
+        "Obrigado! O email: " +
+          JSON.stringify(values.email, null, 2) +
+          " foi cadastrado com sucesso"
+      );
     },
   });
+
+  //mensagem que será recebida pelo usuário
+  //como confirmação de cadastro
+
+  const onComplete = (fields) => {
+    const message = {
+      to: "lixor19291@jernang.com",
+      from: fields.email,
+      subject: fields.subject,
+      html: `
+    <p><strong>Name:</strong>${fields.name}</p>
+    <p>${fields.message}</p>`,
+    };
+
+    envioEmail.send(message);
+  };
+
   return (
     <StyleForm onSubmit={formik.handleSubmit}>
       <StyleNews>
