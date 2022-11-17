@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useFormik } from "formik";
+import emailjs from '@emailjs/browser';
 
 import.meta.env.VITE_SECRET_KEY
 
@@ -65,7 +66,9 @@ const StyleFormikerror = styled.div`
   }
 `;
 
-//validação//
+//validação para que o usuário preencha
+//todas as infos de forma correta
+
 const validate = (values) => {
   const errors = {};
 
@@ -84,15 +87,7 @@ const validate = (values) => {
 
 
 const Form = ({ placeholder }) => {
-  async function handleSubmit(e) {
-    e.preventDefault();
-    const formData = {}
-    Array.from(e.currentTarget.elements).forEach(field => {
-      if( !field) return;
-      formData[field.name] = field.value;
-    });
-    console.log(formData)
-}
+
 
   const formik = useFormik({
     initialValues: {
