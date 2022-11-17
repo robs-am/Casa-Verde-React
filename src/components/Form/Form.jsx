@@ -78,18 +78,28 @@ const validate = (values) => {
   return errors;
 };
 
-//envio de emails
+//envio de emails após a confirmação de cadastro avisando
+//o usuário
 
-const envioEmail = require("@sendgrid/mail");
 
 
 const Form = ({ placeholder }) => {
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const formData = {}
+    Array.from(e.currentTarget.elements).forEach(field => {
+      if( !field) return;
+      formData[field.name] = field.value;
+    });
+    console.log(formData)
+}
+
   const formik = useFormik({
     initialValues: {
       email: "",
     },
 
-    //validação do cadastro com alerta para o usuário que o email foi
+    //validação do cadastro com alerta visual para o usuário que o email foi
     //cadastrado
 
     validate,
@@ -102,21 +112,12 @@ const Form = ({ placeholder }) => {
     },
   });
 
-  //mensagem que será recebida pelo usuário
+  //mensagem que será recebida na caixa de entrada do usuário
   //como confirmação de cadastro
 
-  const onComplete = (fields) => {
-    const message = {
-      to: "lixor19291@jernang.com",
-      from: fields.email,
-      subject: fields.subject,
-      html: `
-    <p><strong>Name:</strong>${fields.name}</p>
-    <p>${fields.message}</p>`,
-    };
 
-    envioEmail.send(message);
-  };
+
+  
 
   return (
     <StyleForm onSubmit={formik.handleSubmit}>
