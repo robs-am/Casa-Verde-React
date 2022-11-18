@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useFormik } from "formik";
-import emailjs from '@emailjs/browser';
-
-
+import emailjs from "@emailjs/browser";
 
 const StyleForm = styled.form`
   @media only screen and (min-width: 992px) {
@@ -83,12 +81,30 @@ const validate = (values) => {
 
 //envio de emails após a confirmação de cadastro avisando
 //o usuário
+function sendEmail(e) {
+  e.preventDefault();
+  const templateParams = {
+    email: "",
+  };
 
-
+  emailjs
+    .send(
+      "service_vb1bu4c",
+      "template_bnnrl1c",
+      templateParams,
+      "KC5RY0MDSmJA7jIP1"
+    )
+    .then(
+      (response) => {
+        console.log("Email Enviado", response.status, response.text);
+      },
+      (error) => {
+        console.log("Failed", error);
+      }
+    );
+}
 
 const Form = ({ placeholder }) => {
-
-
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -109,10 +125,6 @@ const Form = ({ placeholder }) => {
 
   //mensagem que será recebida na caixa de entrada do usuário
   //como confirmação de cadastro
-
-
-
-  
 
   return (
     <StyleForm onSubmit={formik.handleSubmit}>
