@@ -5,15 +5,7 @@ import { useFormik } from "formik";
 import emailjs from "@emailjs/browser";
 
 const StyleForm = styled.form`
-@media only screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: left;
-    justify-content: center;
 
-    height: 75px;
-    width: 35em;
-  }
   @media only screen and (min-width: 992px) {
     display: flex;
     flex-direction: column;

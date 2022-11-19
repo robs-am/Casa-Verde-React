@@ -61,7 +61,7 @@ const Styleh1 = styled.h1`
     line-height: 70px;
     max-width: 8em;
     height: 1.8em;
-    margin-block: 0.3em;
+    margin-block: 0.5em;
   }
   @media only screen and (min-width: 992px) {
     font-size: 82px;
