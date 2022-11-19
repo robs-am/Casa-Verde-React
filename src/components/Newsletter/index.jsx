@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+
+
 import Form from "../Form/Form";
 
 const StyleHero = styled.section`
@@ -10,7 +12,7 @@ const StyleHero = styled.section`
   padding-inline: 1.8em;
 
   background-color: #ffe29a;
-  height: 100vh;
+  
 
   @media only screen and (min-width: 768px) {
     padding-inline: 4em;
@@ -18,7 +20,7 @@ const StyleHero = styled.section`
   }
   @media only screen and (min-width: 992px) {
     padding-left: 4em;
-    margin-top: 7.4em;
+    margin-top: 3em;
     margin-left: 3em;
 
     background-color: transparent;
@@ -35,12 +37,14 @@ const StyleHero = styled.section`
       content: "";
       background-image: url(/public/images/planta-hero.svg);
       background-repeat: no-repeat;
+      background-size: 750px 750px;
       width: 787px;
       height: 1183px;
       position: absolute;
       right: 0%;
       top: 0%;
       pointer-events: none;
+      
     }
   }
 `;
@@ -61,28 +65,30 @@ const Styleh1 = styled.h1`
     line-height: 70px;
     max-width: 8em;
     height: 1.8em;
-    margin-block: 0.5em;
+    margin-block: 0.3em;
   }
   @media only screen and (min-width: 992px) {
     font-size: 82px;
-    line-height: 90px;
-    margin-bottom: 0.8em;
+    line-height: 70px;
+    margin-bottom: 0.5em;
+    margin-top:0.2em;
   }
 `;
 
 const Stylep1 = styled.p`
-  margin-top: 1em;
+  margin-top: 2em;
 
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 27px;
-  margin-block: 0.3em;
+  margin-block: 1em;
   opacity: 0.9;
 
   @media only screen and (min-width: 768px) {
-    margin-top: 2em;
-    font-size: 24px;
+    margin-top: 2.5em;
+    font-size: 26px;
+    margin-bottom:0.2em;
   }
 
   @media only screen and (min-width: 992px) {
@@ -91,6 +97,7 @@ const Stylep1 = styled.p`
     font-size: 22px;
     line-height: 27px;
     opacity: 0.7;
+    margin-block:0;
   }
 `;
 
@@ -103,13 +110,13 @@ const Stylep2 = styled.p`
   @media only screen and (min-width: 768px) {
     width: 28em;
     font-size: 22px;
-    line-height: 30px;
+    line-height: 34px;
     margin-top: 0.5em;
   }
   @media only screen and (min-width: 992px) {
     width: 30em;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 26px;
   }
 `;

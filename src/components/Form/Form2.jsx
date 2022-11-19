@@ -1,16 +1,15 @@
-import React from "react";
-
+import { useState } from "react";
 import styled from "styled-components";
-import { useFormik } from "formik";
 import emailjs from "@emailjs/browser";
+import { validateYupSchema } from "formik";
 
 const StyleForm = styled.form`
-@media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
-    
+
     height: 100px;
     width: 35em;
   }
@@ -76,38 +75,30 @@ const StyleButton = styled.button`
     width: 15em;
     font-size: 14px;
     font-weight: 400;
-    
   }
 `;
 
-const StyleFormikerror = styled.div`
-  @media only screen and (min-width: 992px) {
+
+function Form2({ placeholder }) {
+  const [email, setEmail] = useState("");
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    //alerta para preencher todos os campost
+    if (email === "") {
+      alert("Preencha todos os campos");
+      return;
+    }
+
+   ;
+    //alerta de email cadastrado
+   
+    const emailInput = input.value
+    alert("O email " + emailInput + "foi cadastrado com sucesso");
   }
-`;
-
-//validação para que o usuário preencha
-//todas as infos de forma correta
-
-
-
-const validate = (values) => {
-  const errors = {};
-
-  if (!values.email) {
-    errors.email = "Campo Obrigatório";
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = "Email inválido";
-  }
-
-  return errors;
-};
-
-//envio de emails após a confirmação de cadastro avisando
-//o usuário
-function sendEmail(e) {
-  e.preventDefault();
   const templateParams = {
-       email: ""
+    email: "",
   };
 
   emailjs
@@ -125,51 +116,24 @@ function sendEmail(e) {
         console.log("Failed", error);
       }
     );
-}
-
-const Form = ({ placeholder }) => {
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-    },
-
-    //validação do cadastro com alerta visual para o usuário que o email foi
-    //cadastrado
-
-    validate,
-    onSubmit: (values) => {
-      alert(
-        "Obrigado! O email: " +
-          JSON.stringify(values.email, null, 2) +
-          " foi cadastrado com sucesso"
-      );
-    },
-  });
-
-  //mensagem que será recebida na caixa de entrada do usuário
-  //como confirmação de cadastro
 
   return (
-    <StyleForm onSubmit={formik.handleSubmit}>
-      <StyleNews>
-        <StyleEmailIcon />
-        <StyleEmailInput
-          id="email"
-          name="email"
-          type="email"
-          placeholder={placeholder}
-          onBlur={formik.handleBlur}
-          onChange={formik.handleChange}
-          value={formik.values.email}
-        />
+    
+      <StyleForm onSubmit={sendEmail}>
+        <StyleNews>
+          <StyleEmailIcon />
+          <StyleEmailInput
+            type="text"
+            placeholder={placeholder}
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+          />
 
-        <StyleButton type="submit">Assinar Newsletter</StyleButton>
-      </StyleNews>
-      {formik.touched.email && formik.errors.email ? (
-        <StyleFormikerror>{formik.errors.email}</StyleFormikerror>
-      ) : null}
-    </StyleForm>
+          <StyleButton type="submit">Assinar Newsletter</StyleButton>
+        </StyleNews>
+      </StyleForm>
+    
   );
-};
+}
 
-export default Form;
+export default Form2;
