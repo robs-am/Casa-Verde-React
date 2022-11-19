@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar";
 import Newsletter from "../../components/Newsletter";
 
 import styled from "styled-components";
+import Ofertas from "./Ofertas/Ofertas";
 
 const Body = styled.body`
   margin: 0;
@@ -32,6 +33,7 @@ const Homepage = () => {
           email={Newsletter.email}
           img={"./images/mail.png"}
         />
+        <Ofertas />
       </Body>
     
   );
