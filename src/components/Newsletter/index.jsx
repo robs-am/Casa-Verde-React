@@ -5,15 +5,16 @@ import Form from "../Form/Form";
 const StyleHero = styled.section`
   display: flex;
   align-items: left;
-
+  
   flex-direction: column;
   padding-inline: 1.8em;
 
   background-color: #ffe29a;
   height: 100vh;
 
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 768px) {
     padding-inline: 4em;
+    ;
   }
   @media only screen and (min-width: 992px) {
     padding-left: 4em;
@@ -54,13 +55,13 @@ const Styleh1 = styled.h1`
 
   color: #202020;
 
-  @media only screen and (min-width: 700px) {
-    font-size: 75px;
+  @media only screen and (min-width: 768px) {
+    font-size: 95px;
     padding-right: 1em;
     line-height: 70px;
     max-width: 8em;
     height: 1.8em;
-    margin-block: 0.2em;
+    margin-block: 0.3em;
   }
   @media only screen and (min-width: 992px) {
     font-size: 82px;
@@ -79,9 +80,9 @@ const Stylep1 = styled.p`
   margin-block: 0.3em;
   opacity: 0.9;
 
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 768px) {
     margin-top: 2em;
-    font-size: 22px;
+    font-size: 24px;
   }
 
   @media only screen and (min-width: 992px) {
@@ -99,9 +100,10 @@ const Stylep2 = styled.p`
   line-height: 26px;
   text-align: left;
 
-  @media only screen and (min-width: 700px) {
-    width: 30em;
-    font-size: 18px;
+  @media only screen and (min-width: 768px) {
+    width: 28em;
+    font-size: 22px;
+    line-height: 30px;
     margin-top: 0.5em;
   }
   @media only screen and (min-width: 992px) {

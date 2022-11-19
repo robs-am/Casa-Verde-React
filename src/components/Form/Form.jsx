@@ -1,9 +1,19 @@
 import React from "react";
+
 import styled from "styled-components";
 import { useFormik } from "formik";
 import emailjs from "@emailjs/browser";
 
 const StyleForm = styled.form`
+@media only screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: left;
+    justify-content: center;
+
+    height: 75px;
+    width: 35em;
+  }
   @media only screen and (min-width: 992px) {
     display: flex;
     flex-direction: column;
@@ -31,7 +41,7 @@ const StyleEmailInput = styled.input`
   background-repeat: no-repeat;
   background-position: 10px;
 
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 768px) {
     width: 25em;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   }
@@ -50,7 +60,7 @@ const StyleButton = styled.button`
     filter: brightness(95%);
   }
 
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 768px) {
     width: 15em;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   }
@@ -66,6 +76,8 @@ const StyleFormikerror = styled.div`
 
 //validação para que o usuário preencha
 //todas as infos de forma correta
+
+
 
 const validate = (values) => {
   const errors = {};
@@ -84,7 +96,8 @@ const validate = (values) => {
 function sendEmail(e) {
   e.preventDefault();
   const templateParams = {
-    email: "",
+   
+    email: ""
   };
 
   emailjs
