@@ -20,7 +20,7 @@ const StyleHero = styled.section`
   }
   @media only screen and (min-width: 992px) {
     padding-left: 4em;
-    margin-top: 3em;
+    margin-top: 8em;
     margin-left: 3em;
 
     background-color: transparent;
@@ -116,7 +116,7 @@ const Stylep2 = styled.p`
   @media only screen and (min-width: 992px) {
     width: 30em;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 26px;
   }
 `;

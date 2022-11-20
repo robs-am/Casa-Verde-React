@@ -10,12 +10,16 @@ const StyleMenu = styled.div`
 
   flex-wrap: wrap;
   flex-direction: column;
+  
+
   @media only screen and (min-width: 768px) {
     margin-block: 1em;
   }
   @media only screen and (min-width: 992px) {
     display: flex;
     flex-direction: row;
+    position: fixed;
+    
   }
 `;
 
@@ -33,6 +37,7 @@ const StyleNav = styled.nav`
   margin-top: 1em;
   width: 100%;
   flex: 1;
+ 
   @media only screen and (min-width: 768px) {
     margin-top: 2em;
   }

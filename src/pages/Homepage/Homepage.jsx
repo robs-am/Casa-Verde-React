@@ -35,7 +35,7 @@ const Homepage = () => {
           email={Newsletter.email}
           img={"./images/mail.png"}
         />
-        <ComoConseguir img={"./images/comoConseguir.png"} />
+        <ComoConseguir img={"./images/comoConseguir_img.png"} />
         <Ofertas />
       </Body>
     
