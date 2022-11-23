@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const StyleContainer = styled.section`
-  margin-block: 3em;
-  margin-inline: 0.2em;
+  
+  margin-top: 1.5em;
+  padding-inline: 1.5em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,13 +14,17 @@ const StyleContainer = styled.section`
   background-position: center;
   background-image: url(/images/bc_cconseguir.png);
 
+  
   //box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+
+ 
   z-index: 1;
 `;
 
 const StyleImg = styled.img`
-  width: 350px;
-  opacity: 0.7;
+  width: 100%;
+  opacity: 0.5;
+  
 `;
 
 
@@ -30,11 +35,11 @@ const Styletext = styled.div`
   justify-content: center;
   flex-direction: column;
   background-color: #f8f8f8;
-  width: 350px;
+  width: 100%;
   position: relative;
-  opacity: 0.8;
-  padding-left: 0.8em;
-  bottom: 70px;
+  opacity: 0.9;
+  padding-left: 1.5em;
+  bottom: 160px;
 `;
 
 const Styleh2 = styled.h2`

@@ -35,7 +35,7 @@ const StyleEmailInput = styled.input`
   padding-block: 1.6em;
   padding-left: 3.4em;
   border: none;
-  width: 25em;
+  width: 27em;
   background-image: url(/public/images/mail.svg);
 
   background-repeat: no-repeat;
@@ -58,7 +58,7 @@ const StyleButton = styled.button`
   color: #ffffff;
   border: none;
   cursor: pointer;
-  width: 25em;
+  width: 27em;
 
   &:hover {
     filter: brightness(95%);
