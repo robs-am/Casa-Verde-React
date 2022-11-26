@@ -1,22 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-
 import Form from "../Form/Form";
 
 const StyleHero = styled.section`
   display: flex;
   align-items: left;
-  
+
   flex-direction: column;
   padding-inline: 1.8em;
 
   background-color: #ffe29a;
-  
 
   @media only screen and (min-width: 768px) {
     padding-inline: 4em;
-    ;
   }
   @media only screen and (min-width: 992px) {
     padding-left: 4em;
@@ -44,11 +41,39 @@ const StyleHero = styled.section`
       right: 0%;
       top: 0%;
       pointer-events: none;
-      
     }
   }
 `;
 
+const StyleWrapper = styled.div`
+  margin-top: 6em;
+`;
+
+const Stylep1 = styled.p`
+  margin-top: 2em;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  margin-block: 1em;
+  opacity: 0.9;
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 2.5em;
+    font-size: 26px;
+    margin-bottom: 0.2em;
+  }
+
+  @media only screen and (min-width: 992px) {
+    width: 30em;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    opacity: 0.7;
+    margin-block: 0;
+  }
+`;
 const Styleh1 = styled.h1`
   font-family: "Elsie Swash Caps", cursive;
   font-style: normal;
@@ -71,33 +96,7 @@ const Styleh1 = styled.h1`
     font-size: 82px;
     line-height: 70px;
     margin-bottom: 0.5em;
-    margin-top:0.2em;
-  }
-`;
-
-const Stylep1 = styled.p`
-  margin-top: 2em;
-
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 27px;
-  margin-block: 1em;
-  opacity: 0.9;
-
-  @media only screen and (min-width: 768px) {
-    margin-top: 2.5em;
-    font-size: 26px;
-    margin-bottom:0.2em;
-  }
-
-  @media only screen and (min-width: 992px) {
-    width: 30em;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 27px;
-    opacity: 0.7;
-    margin-block:0;
+    margin-top: 0.2em;
   }
 `;
 
@@ -124,13 +123,15 @@ const Stylep2 = styled.p`
 const Newsletter = ({ email, placeholder }) => {
   return (
     <StyleHero>
-      <Stylep1>Sua casa com as</Stylep1>
-      <Styleh1>melhores plantas</Styleh1>
-      <Stylep2>
-        Encontre aqui uma vasta seleção de plantas para decorar a sua casa e
-        torná-lo uma pessoa mais feliz no seu dia a dia. Entre com seu e-mail e
-        assine nossa newsletter para saber das novidades da marca.
-      </Stylep2>
+      <StyleWrapper>
+        <Stylep1>Sua casa com as</Stylep1>
+        <Styleh1>melhores plantas</Styleh1>
+        <Stylep2>
+          Encontre aqui uma vasta seleção de plantas para decorar a sua casa e
+          torná-lo uma pessoa mais feliz no seu dia a dia. Entre com seu e-mail
+          e assine nossa newsletter para saber das novidades da marca.
+        </Stylep2>
+      </StyleWrapper>
       <Form />
     </StyleHero>
   );

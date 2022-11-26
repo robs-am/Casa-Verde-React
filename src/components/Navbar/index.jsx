@@ -5,9 +5,11 @@ const StyleMenu = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-block: 1em;
+  margin-bottom: 1em;
   padding-inline: 0.6em;
-
+  background-color: #f8f8f8;
+  position: fixed;
+  z-index: 999;
   flex-wrap: wrap;
   flex-direction: column;
   
@@ -24,7 +26,9 @@ const StyleMenu = styled.div`
 `;
 
 const StyleLogo = styled.div`
-  margin-left: 3em;
+  @media only screen and (min-width: 992px) {
+    margin-left: 3em;
+  }
 `;
 
 const Styleimg = styled.img`
@@ -37,6 +41,7 @@ const StyleNav = styled.nav`
   margin-top: 1em;
   width: 100%;
   flex: 1;
+  
  
   @media only screen and (min-width: 768px) {
     margin-top: 2em;
