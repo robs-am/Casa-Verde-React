@@ -36,7 +36,7 @@ const Homepage = () => {
           img={"./images/mail.png"}
         />
         <ComoConseguir img={"./images/comoConseguir_img.png"} />
-        <Ofertas />
+        <Ofertas img={"./images/produto-01_1.png"} />
       </Body>
     
   );
