@@ -13,18 +13,27 @@ const Styleh3 = styled.h3`
   font-size: 22px;
   line-height: 27px;
 
-  text-align: left;
+  text-align: center;
 
   color: #202020;
 
   opacity: 0.5;
 `;
 
+const Styleh2 = styled.h2`
+ font-family: 'Elsie Swash Caps';
+font-style: normal;
+font-weight: 900;
+font-size: 52px;
+line-height: 60px;
+text-align: center;
+`;
+
 const Ofertas = () => {
   return (
     <StyleSection>
       <Styleh3>Conheça nossas</Styleh3>
-      <h1>ofertas</h1>
+      <Styleh2>ofertas</Styleh2>
       <section className="ofertas-wrapper">
         <div className="Ajuga">
           <h2>Ajuga reptans</h2>
