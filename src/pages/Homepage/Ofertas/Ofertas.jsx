@@ -9,70 +9,97 @@ const StyleSection = styled.section`
   margin-block: 1em;
 `;
 
-const Styleh3 = styled.h3`
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 27px;
 
-  text-align: center;
+const StyleOfertas = styled.section`
+  margin-top: 1em;
+  padding-inline: 1.5em;
 
-  color: #202020;
+  h2 {
+    font-family: "Elsie Swash Caps";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 60px;
+    text-align: center;
+  }
 
-  opacity: 0.5;
+  h3 {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+
+    text-align: center;
+
+    color: #202020;
+
+    opacity: 0.5;
+  }
 `;
 
-const Styleh2 = styled.h2`
- font-family: 'Elsie Swash Caps';
-font-style: normal;
-font-weight: 900;
-font-size: 52px;
-line-height: 60px;
-text-align: center;
-`;
-
-const StyleOfertas = styled.section `
-margin-top: 1em;
-  
-
-`;
-
-const StylePlanta = styled.div `
-background-image: url(/images/bgOferta.png);
-width: 100%;
-height: 200px;
+const StylePlantaCard = styled.div`
+  background-image: url(/images/bgOferta.png);
+  width: 100%;
+  height: 200px;
 
   display: flex;
   align-items: center;
-  
-  flex-direction: column;
+
+  flex-direction: row;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+
+  .plantaNome {
+    font-family: "Elsie Swash Caps";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 37px;
+
+    color: #202020;
+  }
+
+  .preco {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .comprar {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    color: #ffcb47;
+  }
 `;
 const StylePlantaImg = styled.img`
-
+  width: 40%;
 `;
 
-const StylePlantah2 = styled.h2 `
-font-family: 'Elsie Swash Caps';
-font-style: normal;
-font-weight: 900;
-font-size: 28px;
-line-height: 37px;
+const StylePlantaTexto = styled.div``;
 
-color: #202020;
-`;
-
-
-const Ofertas = ({img}) => {
+const Ofertas = ({ img }) => {
   return (
     <StyleSection>
-      <Styleh3>Conheça nossas</Styleh3>
-      <Styleh2>ofertas</Styleh2>
+      {/* Chamadas das ofertas */}
       <StyleOfertas>
-        <StylePlanta>
-        <StylePlantaImg img src={img} alt="Ajuga reptans" />
-          <StylePlantah2>Ajuga reptans</StylePlantah2>
-          <p>R$ 20,00</p>
-          <p>Comprar </p>
-        </StylePlanta>
+        <h3>Conheça nossas</h3>
+        <h2>ofertas</h2>
+      </StyleOfertas>
+      <StyleOfertas>
+        <StylePlantaCard>
+          {/* Lista de plantas */}
+          <StylePlantaImg img src={img} alt="Ajuga reptans" />
+          <StylePlantaTexto>
+            <h2 className="plantaNome">Ajuga reptans</h2>
+            <p className="preco">R$ 20,00</p>
+            <p className="comprar">Comprar </p>
+          </StylePlantaTexto>
+        </StylePlantaCard>
       </StyleOfertas>
     </StyleSection>
   );

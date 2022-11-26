@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Ellipse from "./../../../components/Ellipse";
+
 
 const StyleContainer = styled.section`
   margin-top: 1.5em;
@@ -32,9 +32,9 @@ const Styletext = styled.div`
   background-color: #f8f8f8;
   width: 100%;
   position: relative;
+  bottom: 100px;
   opacity: 0.9;
   padding-left: 1.5em;
-  
 `;
 
 const Styleh2 = styled.h2`
@@ -42,7 +42,7 @@ const Styleh2 = styled.h2`
   font-style: normal;
   font-weight: 900;
   font-size: 36px;
-  margin-block:0.3em;
+  margin-block: 0.3em;
   line-height: 30px;
 
   color: #202020;
@@ -77,8 +77,6 @@ const Styleul = styled.ul`
 const Styleli = styled.li`
   &::before {
     content: url(/images/Ellipse_svg.svg);
-    
-    
   }
   color: #202020;
   font-weight: 400;
