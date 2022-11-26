@@ -76,16 +76,18 @@ const Styleul = styled.ul`
 
 const Styleli = styled.li`
   &::before {
-    content: url(/images/Ellipse.png);
+    content: url(/images/Ellipse_svg.svg);
+    
+    
   }
   color: #202020;
   font-weight: 400;
   font-size: 18px;
 
   display: flex;
-  gap: 0.5em;
+  gap: 0.6em;
   align-items: center;
-  padding: 0.5em;
+  padding-bottom: 0.5em;
 `;
 
 // const Stylepng = styled.png`
