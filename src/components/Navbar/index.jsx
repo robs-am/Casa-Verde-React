@@ -6,8 +6,10 @@ const StyleMenu = styled.div`
   align-items: center;
   justify-content: space-around;
   margin-bottom: 1em;
+  padding-block: 0.5em;
   padding-inline: 0.6em;
   background-color: #f8f8f8;
+  
   position: fixed;
   z-index: 999;
   flex-wrap: wrap;
@@ -57,7 +59,7 @@ const StyleNav = styled.nav`
 
 const StyleLinks = styled.ul`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   list-style: none;
   text-decoration: none;
   font-size: 14px;
@@ -83,7 +85,7 @@ const StyleLinks = styled.ul`
 `;
 
 const StyleLink = styled.a`
-  padding-inline: 0.5em;
+  padding: 0.4em;
   font-weight: 500;
 
   &:hover {

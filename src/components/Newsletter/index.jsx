@@ -46,7 +46,7 @@ const StyleHero = styled.section`
 `;
 
 const StyleWrapper = styled.div`
-  margin-top: 6em;
+  margin-top: 9em;
 `;
 
 const Stylep1 = styled.p`
