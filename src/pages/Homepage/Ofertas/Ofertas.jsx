@@ -6,12 +6,12 @@ const StyleSection = styled.section`
   align-items: left;
   justify-content: center;
   flex-direction: column;
-  margin-block: 1em;
+  margin-block: 0.5em;
+  background-color: #ffffff;
 `;
 
-
 const StyleOfertas = styled.section`
-  margin-top: 1em;
+  margin-top: 0.5em;
   padding-inline: 1.5em;
 
   h2 {
@@ -91,8 +91,8 @@ const Ofertas = ({ img }) => {
         <h2>ofertas</h2>
       </StyleOfertas>
       <StyleOfertas>
+        {/* Lista de plantas */}
         <StylePlantaCard>
-          {/* Lista de plantas */}
           <StylePlantaImg img src={img} alt="Ajuga reptans" />
           <StylePlantaTexto>
             <h2 className="plantaNome">Ajuga reptans</h2>

@@ -10,7 +10,8 @@ import Ofertas from "./Ofertas/Ofertas";
 const Body = styled.body`
   margin: 0;
   padding: 0;
-
+  background-color: #ffffff;
+  
   box-sizing: border-box;
 
   @media only screen and (min-width: 992px) {
