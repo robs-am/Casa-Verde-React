@@ -34,7 +34,7 @@ const Styletext = styled.div`
   position: relative;
   opacity: 0.9;
   padding-left: 1.5em;
-  bottom: 100px;
+  
 `;
 
 const Styleh2 = styled.h2`
@@ -42,7 +42,7 @@ const Styleh2 = styled.h2`
   font-style: normal;
   font-weight: 900;
   font-size: 36px;
-  margin-top:0.3em;
+  margin-block:0.3em;
   line-height: 30px;
 
   color: #202020;
@@ -69,7 +69,7 @@ const Styleul = styled.ul`
   align-items: left;
   justify-content: center;
   flex-direction: column;
-  margin-block: 1.6em;
+  margin-block: 1.5em;
   padding-left: 0.2em;
   list-style: none;
 `;

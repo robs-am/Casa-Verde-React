@@ -6,6 +6,7 @@ const StyleSection = styled.section`
   align-items: left;
   justify-content: center;
   flex-direction: column;
+  margin-top: 1em;
 `;
 
 const Styleh3 = styled.h3`
