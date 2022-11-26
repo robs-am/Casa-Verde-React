@@ -30,18 +30,41 @@ line-height: 60px;
 text-align: center;
 `;
 
+const StyleOfertas = styled.section `
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+`;
+
+const StylePlanta = styled.div `
+background-image: url(/images/bgOferta.png);
+`;
+
+const StylePlantah2 = styled.h2 `
+font-family: 'Elsie Swash Caps';
+font-style: normal;
+font-weight: 900;
+font-size: 28px;
+line-height: 37px;
+
+color: #202020;
+`;
+
+
 const Ofertas = () => {
   return (
     <StyleSection>
       <Styleh3>Conheça nossas</Styleh3>
       <Styleh2>ofertas</Styleh2>
-      <section className="ofertas-wrapper">
-        <div className="Ajuga">
-          <h2>Ajuga reptans</h2>
+      <StyleOfertas>
+        <StylePlanta>
+          <StylePlantah2>Ajuga reptans</StylePlantah2>
           <p>R$ 20,00</p>
           <p>Comprar </p>
-        </div>
-      </section>
+        </StylePlanta>
+      </StyleOfertas>
     </StyleSection>
   );
 };
