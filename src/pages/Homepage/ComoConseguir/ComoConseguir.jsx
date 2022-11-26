@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import Ellipse from "./../../../components/Ellipse";
 
 const StyleContainer = styled.section`
-  
   margin-top: 1.5em;
   padding-inline: 1.5em;
   display: flex;
@@ -14,20 +14,15 @@ const StyleContainer = styled.section`
   background-position: center;
   background-image: url(/images/bc_cconseguir.png);
 
-  
   //box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
 
- 
   z-index: 1;
 `;
 
 const StyleImg = styled.img`
   width: 100%;
   opacity: 0.5;
-  
 `;
-
-
 
 const Styletext = styled.div`
   display: flex;
@@ -39,14 +34,15 @@ const Styletext = styled.div`
   position: relative;
   opacity: 0.9;
   padding-left: 1.5em;
-  bottom: 160px;
+  bottom: 100px;
 `;
 
 const Styleh2 = styled.h2`
   font-family: "Elsie Swash Caps";
   font-style: normal;
   font-weight: 900;
-  font-size: 30px;
+  font-size: 36px;
+  margin-top:0.3em;
   line-height: 30px;
 
   color: #202020;
@@ -57,7 +53,7 @@ const Stylep = styled.p`
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 27px;
   margin-bottom: 0.03em;
 
@@ -69,21 +65,31 @@ const Stylep = styled.p`
 `;
 
 const Styleul = styled.ul`
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
   margin-block: 1.6em;
   padding-left: 0.2em;
-  list-style:none;
+  list-style: none;
 `;
 
 const Styleli = styled.li`
+  &::before {
+    content: url(/images/Ellipse.png);
+  }
   color: #202020;
   font-weight: 400;
   font-size: 18px;
-  opacity: 0.7;
+
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  padding: 0.5em;
 `;
 
 // const Stylepng = styled.png`
 // background-image: url(/images/Ellipse.png);
-
 
 // `;
 

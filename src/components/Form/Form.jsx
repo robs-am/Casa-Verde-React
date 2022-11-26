@@ -5,12 +5,12 @@ import { useFormik } from "formik";
 import emailjs from "@emailjs/browser";
 
 const StyleForm = styled.form`
-@media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
-    
+
     height: 100px;
     width: 35em;
   }
@@ -76,7 +76,6 @@ const StyleButton = styled.button`
     width: 15em;
     font-size: 14px;
     font-weight: 400;
-    
   }
 `;
 
@@ -87,8 +86,6 @@ const StyleFormikerror = styled.div`
 
 //validação para que o usuário preencha
 //todas as infos de forma correta
-
-
 
 const validate = (values) => {
   const errors = {};
@@ -107,7 +104,7 @@ const validate = (values) => {
 function sendEmail(e) {
   e.preventDefault();
   const templateParams = {
-       email: ""
+    email: "",
   };
 
   emailjs
