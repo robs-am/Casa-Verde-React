@@ -93,12 +93,7 @@ const Ofertas = ({ img }) => {
       <StyleOfertas>
         {/* Lista de plantas */}
         <StylePlantaCard>
-          <StylePlantaImg img src={img} alt="Ajuga reptans" />
-          <StylePlantaTexto>
-            <h2 className="plantaNome">Ajuga reptans</h2>
-            <p className="preco">R$ 20,00</p>
-            <p className="comprar">Comprar </p>
-          </StylePlantaTexto>
+         const url = 
         </StylePlantaCard>
       </StyleOfertas>
     </StyleSection>

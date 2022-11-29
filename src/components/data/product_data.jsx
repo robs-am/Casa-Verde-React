@@ -1,5 +1,0 @@
-const product_card = [
-    {
-        
-    }
-]
