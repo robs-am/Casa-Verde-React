@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Product from "../../../components/data/products";
 
 const StyleSection = styled.section`
   display: flex;
@@ -93,7 +94,7 @@ const Ofertas = ({ img }) => {
       <StyleOfertas>
         {/* Lista de plantas */}
         <StylePlantaCard>
-         const url = 
+         <Product />
         </StylePlantaCard>
       </StyleOfertas>
     </StyleSection>
