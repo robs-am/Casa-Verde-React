@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react'
 
-function Product() {
-    return (  );
+const Products = () => {
+  return (
+    <div>P</div>
+  )
 }
 
-export default Product;
+export default Products
