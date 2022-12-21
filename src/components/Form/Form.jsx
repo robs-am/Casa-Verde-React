@@ -55,6 +55,7 @@ const StyleButton = styled.button`
   background: #ffcb47;
   box-shadow: 10px 10px 30px rgba(255, 203, 71, 0.3);
   padding: 1.6em;
+  margin-bottom: 2.5em;
   color: #ffffff;
   border: none;
   cursor: pointer;

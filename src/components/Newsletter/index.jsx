@@ -102,7 +102,7 @@ const Styleh1 = styled.h1`
 
 const Stylep2 = styled.p`
   font-size: 16px;
-  margin-bottom: 2.5em;
+  margin-bottom: 2em;
   line-height: 26px;
   text-align: left;
 
